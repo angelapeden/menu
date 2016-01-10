@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head><title>Blah</title>
+<link rel="stylesheet" type="text/css" href="blah.css">
+
+<style type="text/css">
+body {
+background:#0a0c14;
+margin: 0;	
+font-family: 'Rajdhani', sans-serif;
+
+}
+
+
+#navbar {
+width: 100%;
+height: 75px;
+background: pink;
+margin: 0px;
+padding: 0px;
+}
+
+#navlist {
+list-style-type: none;
+width: 100%;
+padding: 0px;
+}
+
+#navlist li {
+float: left;
+}
+
+.link-dropdown {
+float: left;
+width:  90%;
+}
+
+#logo {
+width: 80%;
+text-align: center;
+float: left;
+height: 50px;
+}
+
+#search {
+width: 10%;
+height: 50px;
+float: right;
+}
+
+#nav-toggle {
+}
+
+.search-toggle {
+	padding: 9px 10px 0px 10px;
+	font-size: 25px;
+	color:#f0f9ff;
+	font-weight: 700;
+	text-decoration:none;
+	text-shadow: 1px 1px 1px #000000;
+	height: 40px;
+}
+
+
+@media screen and (min-width: 900px) {
+	#logo, .nav-toggle {
+display: none;
+}
+
+#links {
+width: 90%;
+}
+}
+
+@media screen and (max-width:899px) {
+.top-links {
+display: none;
+position: absolute;
+top: 50px;
+left: 0px;
+background: orange;
+}
+
+.top-links ul li a:link {
+width: 100%;
+}
+
+.link-dropdown {
+width: 10%;
+font-size: 25px;
+padding-top: 10px;
+text-decoration: none;
+}
+
+.nav-toggle {
+	color:#f0f9ff;
+	font-weight: 700;
+	text-decoration:none;
+	text-shadow: 1px 1px 1px #000000;
+	height: 40px;
+}
+
+
+#logo img {
+max-width: 98%;
+margin-top: 10px;
+}
+}
+
+@media screen and (max-width: 679px) {
+.dropdown {
+width: 100%;
+right: 0;
+padding: 10px;
+}
+}
+
+@media screen and (max-width: 464px) {
+.link-dropdown, #search {
+width: 15%;
+}
+
+#logo {
+width: 70%;
+padding: 0px;
+}
+
+}
+
+#blah {
+width: 80%;
+min-height: 1000px;
+background: #12151C;
+margin: 70px auto;
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".nav-toggle").click(function(){
+        $(".top-links").slideToggle("fast");
+    });
+});
+
+$(document).ready(function(){
+    $(".search-toggle").click(function(){
+        $(".dropdown").slideToggle("500");
+    });
+});
+
+
+$(function ($) {
+    var $stuff = $('.toggle-group');
+    $('.slidedown').click(function () {
+        var $target = $($(this).data('target')).stop(true).slideToggle();
+        $stuff.not($target).filter(':visible').stop(true, true).slideUp();
+    })
+});
+
+</script>
+</head>
+
+<body>
+<div class="top-bar-bg">
+<div class="content_div">
+<div class="link-dropdown"><a class="nav-toggle" href="#"><i class="fa fa-bars"></i></a>
+	<div class="top-links">
+		<ul>
+	<li><a href="#"><i class="fa fa-home"></i></a></li>
+	<li><a href="#">Inventory</a></li>
+	<li><a href="#">Watch List</a></li>
+	<li><a href="#">Create Auction</a></li>
+	<li><a href="#">Buy Bids</a></li>
+	<li><a href="#">Account</a></li>
+	<li><a href="#"><i class="fa fa-power-off"></i></a></li>
+</ul>
+	</div>
+	</div>
+
+
+	<div id="logo">
+		<a href="#"><img src="http://esportxchange.com/wp-content/uploads/2015/05/esportredplan.png" alt=""></a>
+	</div>
+
+
+	<div id="search"><a href="#" class="search-toggle"><i class="fa fa-search"></i></a>
+				<div class="dropdown">
+					<div id="sort">
+	<div class="sortlogo">
+		<img src="http://i67.tinypic.com/51ykd0.jpg"/>
+	</div>
+	
+	
+    <div class="one sortitem">
+        <div class="heavy slidedown slidedown-1" data-target=".group-heavy">
+            <a>HEAVY</a>
+        </div>
+    </div>
+	
+    <div class="two sortitem">
+        <div class="smgs slidedown slidedown-2" data-target=".group-smgs">
+            <a>SMGs</a>
+        </div>
+    </div>
+	
+    <div class="three sortitem">
+        <div class="pistols slidedown slidedown-3" data-target=".group-pistols">
+            <a>PISTOLS</a>
+        </div>
+    </div>
+	
+    <div class="four sortitem">
+        <div class="rifles slidedown slidedown-4" data-target=".group-rifles">
+            <a>RIFLES</a>
+        </div>
+    </div>
+	
+	<div class="five sortitem">
+		<div class="knives slidedown slidedown-5" data-target=".group-knives">
+			<a>KNIVES</a>
+		</div>
+	</div>
+	
+	<div class="six sortitem">
+		<div class="cases slidedown slidedown-6" data-target=".group-cases">
+			<a>CASES</a>
+		</div>
+	</div>
+
+	<div class="seven sortitem">
+		<div class="keys slidedown slidedown-7" data-target=".group-keys">
+			<a>KEYS</a>
+		</div>
+	</div>
+</div>
+<div id="circle-sub">
+	<div class="toggle-group group-heavy">
+		<ul>
+			<li><a href="#">Nova</a></li>
+			<li><a href="#">XM1014</a></li>
+			<li><a href="#">MAG-7</a></li>
+			<li><a href="#">Sawed-Off</a></li>
+			<li><a href="#">M249</a></li>
+			<li><a href="#">Negev</a></li>
+		</ul>
+	</div>
+	
+	<div class="toggle-group group-smgs">
+		<ul>
+			<li><a href="#">MAC-10</a></li>
+			<li><a href="#">MP9</a></li>
+			<li><a href="#">MP7</a></li>
+			<li><a href="#">UMP-45</a></li>
+			<li><a href="#">PP-Bizon</a></li>
+			<li><a href="#">P90</a></li>
+		</ul>
+	</div>
+	
+	<div class="toggle-group group-pistols">
+		<ul>
+			<li><a href="#">P2000</a></li>
+			<li><a href="#">USP-S</a></li>
+			<li><a href="#">Glock-18</a></li>
+			<li><a href="#">P250</a></li>
+			<li><a href="#">Desert-Eagle</a></li>
+			<li><a href="#">Dual Berettas</a></li>
+			<li><a href="#">Five-Seven</a></li>
+			<li><a href="#">Tec-9</a></li>
+			<li><a href="#">CZ75-Auto</a></li>
+		</ul>
+	</div>
+	
+	<div class="toggle-group group-rifles">
+		<ul>
+			<li><a href="#">Famas</a></li>
+			<li><a href="#">Galil-AR</a></li>
+			<li><a href="#">M4A4</a></li>
+			<li><a href="#">M4A1-S</a></li>
+			<li><a href="#">AK-47</a></li>
+			<li><a href="#">SSG 08</a></li>
+			<li><a href="#">AUG</a></li>
+			<li><a href="#">SG 553</a></li>
+			<li><a href="#">AWP</a></li>
+			<li><a href="#">Scar-20</a></li>
+			<li><a href="#">G3SG1</a></li>
+		</ul>
+	</div>
+	
+	<div class="toggle-group group-knives">
+		<ul>
+			<li><a href="#">Gut Knife</a></li>
+			<li><a href="#">Flip Knife</a></li>
+			<li><a href="#">Bayonet</a></li>
+			<li><a href="#">M9 Bayonet</a></li>
+			<li><a href="#">Karambit</a></li>
+			<li><a href="#">Huntsman Knife</a></li>
+			<li><a href="#">Butterfly Knife</a></li>
+		</ul>
+	</div>
+	
+	<div class="toggle-group group-cases">
+		<ul>
+			<li><a href="#">Case</a></li>
+		</ul>
+	</div>
+	
+	<div class="toggle-group group-keys">
+		<ul>
+			<li><a href="#">Key</a></li>
+		</ul>
+	</div>
+</div>
+				</div>
+</div></div>
+</div>
+
+<div id="blah">
+<h1>Blah!</h1>
+<h2>Blah blahblah!</h2>
+
+<p>BLaAAAAAAAAAAHHHHHHHHH</p>
+</div>
+</body>
+</html>
